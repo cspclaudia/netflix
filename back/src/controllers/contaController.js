@@ -55,7 +55,7 @@ module.exports = {
       });
     }
   },
-  async BuscarContaLogada(req, res) {
+  async buscarContaLogada(req, res) {
     try {
       const conta = await Conta.findById(res.locals.auth_data.id);
       return res.json({ conta });
