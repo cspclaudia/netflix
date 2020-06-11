@@ -8,7 +8,7 @@ import { ContaService } from '../app/core/services/conta.service';
 import { InterceptorService } from './core/utils/intercept.service';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { ThemesModule } from './views/themes/themes.module';
-// import { MensagemService } from './core/services/mensagens.service';
+import { PerfilService } from './core/services/perfil.service';
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -20,7 +20,7 @@ import { ThemesModule } from './views/themes/themes.module';
     FormsModule,
   ],
   providers: [
-    // MensagemService,
+    PerfilService,
     ContaService,
     {
       provide: HTTP_INTERCEPTORS,
