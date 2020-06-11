@@ -7,14 +7,14 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ContaService } from '../app/core/services/conta.service';
 import { InterceptorService } from './core/utils/intercept.service';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-// import { ThemesModule } from './views/themes/themes.module';
+import { ThemesModule } from './views/themes/themes.module';
 // import { MensagemService } from './core/services/mensagens.service';
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    // ThemesModule,
+    ThemesModule,
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,

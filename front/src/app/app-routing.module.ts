@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { AuthGuard } from './core/autenticacao/autenticacao.guard';
-// import { BaseComponent } from './views/themes/base/base.component';
+import { BaseComponent } from './views/themes/base/base.component';
 
 const routes: Routes = [
   {
@@ -12,17 +12,17 @@ const routes: Routes = [
   },
   {
     path: '',
-    // component: BaseComponent,
+    component: BaseComponent,
     canActivate: [AuthGuard],
-    // children: [
-    //   {
-    //     path: 'Mensagens',
-    //     loadChildren: () =>
-    //       import('./views/pages/mensagens/mensagens.module').then(
-    //         (m) => m.MensagensModule
-    //       ),
-    //   },
-    // ],
+    children: [
+      {
+        path: 'perfis',
+        loadChildren: () =>
+          import('./views/themes/themes.module').then(
+            (m) => m.ThemesModule
+          ),
+      },
+    ],
   },
 ];
 
