@@ -27,22 +27,22 @@ module.exports = {
     }
   },
   async login(req, res) {
-    const { email, senha } = req.body;
-    if (!email || !senha) {
+    const { Email, Senha } = req.body;
+    if (!Email || !Senha) {
       return res.status(400).json({
         mensagem: "Dados insuficientes",
       });
     }
     try {
-      Conta.findOne({ Email: email }, (err, conta) => {
+      Conta.findOne({ Email: Email }, (err, conta) => {
         if (err) return res.status(400).json({ err });
 
         if (!conta) return res.status(400).json({ erro: "login invalido" });
 
-        bcrypt.compare(senha, conta.Senha, (err, same) => {
+        bcrypt.compare(Senha, conta.Senha, (err, same) => {
           if (!same) return res.status(400).json({ erro: "login invalido" });
 
-          conta.senha = undefined;
+          conta.Senha = undefined;
           return res.status(200).json({
             conta,
             token: createUserToken(conta._id),

@@ -1,1 +1,23 @@
-<p>registro works!</p>
+<form [formGroup]="formCadastro" class="containerAssinar">
+    <h1>Assinar</h1><br> 
+    <div class="row">
+        <div class="col-md-12">
+            <input type="text" class="form-control" placeholder="E-mail" formControlName="Email" required>
+        </div>
+    </div><br>
+    <div class="row">
+        <div class="col-md-12">
+            <input type="text" class="form-control" placeholder="Telefone" formControlName="Telefone" required>
+        </div>
+    </div><br>
+    <div class="row">
+        <div class="col-md-12">
+            <input type="text" class="form-control" placeholder="Senha" formControlName="Senha" required>
+        </div>
+    </div><br>
+    <div class="row">
+        <div class="col-md-12">
+            <button type="submit" class="continuar" (click)="submit()">Continuar</button>
+        </div>
+    </div><br>
+</form>

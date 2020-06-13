@@ -1,1 +1,26 @@
-<p>login works!</p>
+<form [formGroup]="formLogin" class="containerLogin">
+    <h1>Entrar</h1><br> 
+    <div class="row">
+        <div class="col-md-12">
+            <input type="text" class="form-control" placeholder="E-mail" formControlName="email" required>
+        </div>
+    </div><br>
+    <div class="row">
+        <div class="col-md-12">
+            <input type="text" class="form-control" placeholder="Senha" formControlName="senha" required>
+        </div>
+    </div><br>
+    <div class="row">
+        <div class="col-md-12">
+            <button type="submit" class="form-control entrar" (click)="submit()">Acessar</button>
+        </div>
+    </div>
+    <br>
+    <div>
+        <input type="checkbox" name="manterLogado" value="true" checked="">
+    <label>Lembrar-se de mim</label>
+    </div>
+    <div>
+        <a class="assinar" (click)="assinar()">Assinar Agora</a>
+    </div>
+</form>

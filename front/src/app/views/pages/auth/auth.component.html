@@ -4,15 +4,33 @@
             <div class="logo"><img src="../../../../assets//img/logo-bg-dark-removebg.png
                 "></div>
             <div class="logar">
-                <button class="entrar">Entrar</button>
+                <button class="entrar" (click)="entrar()">Entrar</button>
             </div>
         </div>
-        <h1 class="title">
-            Filmes, séries e muito mais. Sem limites.
-        </h1>
-        <h3 class="info">Assista onde quiser. Cancele quando quiser.</h3>
-        <h3 class="info">Pronto para assistir? Informe seu email para criar ou reiniciar sua assinatura.</h3>
-      
-        <!-- <router-outlet></router-outlet> -->
+        <div class="content">
+            <ng-container *ngIf="!show; then template1 else template2"></ng-container>
+
+            <ng-template #template1>
+
+                <h1 class="title">
+                    Filmes, séries e muito mais. Sem limites.
+                </h1>
+                <h3 class="info">Assista onde quiser. Cancele quando quiser.</h3>
+                <br><br><br>
+                <h3 class="info">Novo por aqui? Assine agora.</h3>
+                <br><br>
+                <div class="row justify-content-md-center">
+                    <div class="col-md-auto">
+                        <button type="submit" class="assinar" (click)="assinar()">Assine a Netflix</button>
+                    </div>
+                </div><br>
+            </ng-template>
+            <ng-template #template2>
+                <div class="routers">
+                    <router-outlet></router-outlet>
+                </div>
+            </ng-template>
+
+        </div>
     </div>
 </div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-auth',
@@ -6,7 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./auth.component.css'],
 })
 export class AuthComponent implements OnInit {
-  constructor() {}
-
-  ngOnInit(): void {}
+  constructor(private router: Router) {}
+  show: any;
+  ngOnInit(): void {
+    this.show = false;
+  }
+  entrar() {
+    this.show = true;
+    this.router.navigateByUrl('/Auth/login');
+  }
+  assinar() {
+    this.show = true;
+    this.router.navigateByUrl('/Auth/registro');
+  }
 }
