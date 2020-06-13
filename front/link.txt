@@ -1,0 +1,5 @@
+https://github.com/AmandaMMAlves/crud-netflix-angular
+
+https://github.com/kompanycoder/mini-netflix
+
+https://github.com/KNBAnderson/Petflix
