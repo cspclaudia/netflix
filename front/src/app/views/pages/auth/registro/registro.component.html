@@ -1,5 +1,13 @@
+<!-- <div class="header">
+    <div class="nav">
+        <div class="logar">
+            <button class="entrar" (click)="entrar()">Entrar</button>
+        </div>
+    </div>
+</div>
+ -->
 <form [formGroup]="formCadastro" class="containerAssinar">
-    <h1>Assinar</h1><br> 
+    <h1>Assinar</h1><br>
     <div class="row">
         <div class="col-md-12">
             <input type="text" class="form-control" placeholder="E-mail" formControlName="Email" required>
@@ -17,7 +25,12 @@
     </div><br>
     <div class="row">
         <div class="col-md-12">
-            <button type="submit" class="continuar" (click)="submit()">Continuar</button>
+            <button type="submit" class="btn btn-danger" (click)="submit()" [disabled]="!formCadastro.valid">
+                Continuar
+            </button>
         </div>
     </div><br>
+    <div>
+        Já possui uma conta? <a class="entrar" (click)="assinar()">Entre agora</a>
+    </div>
 </form>

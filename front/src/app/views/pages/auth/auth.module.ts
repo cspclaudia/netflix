@@ -12,7 +12,7 @@ const routes: Routes = [
     component: AuthComponent,
     children: [
       {
-        path: 'Auth',
+        path: '',
         redirectTo: 'Auth',
         pathMatch: 'full',
       },
