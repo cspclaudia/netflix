@@ -1,16 +1,16 @@
 .containerAssinar {
-  margin-left: 420px;
-  margin-top: 80px;
+  margin: 0 auto;
+  display: block;
   padding: 20px 30px;
   max-width: 40%;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.7);
 }
 .logo img {
   width: 200px;
   height: 100px;
   float: right;
 }
-.continuar {
+/* .continuar {
   background-color: var(--bg-secundaria);
   line-height: normal;
   padding: 7px 17px;
@@ -19,6 +19,15 @@
   border: none;
   border-radius: 4px;
   color: var(--color-pimaria);
+} */
+.btn-danger{
+  background-color: var(--bg-secundaria);
+  border: none;
+}
+.entrar{
+  color: var(--color-pimaria);
+  cursor: pointer;
+  border-bottom: 1px solid var(--color-pimaria);
 }
 .title {
   max-width: 720px;

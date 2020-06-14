@@ -1,0 +1,41 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.background {
+  margin: 0 auto;
+  height: 667px;
+  background: rgba(0, 0, 0, 255);
+  background-size: cover;
+  color: var(--color-pimaria);
+}
+.logo img {
+  width: 170px;
+  height: 100px;
+  float: right;
+  margin-left: 30px;
+}
+.title {
+  max-width: 720px;
+  margin: 0 auto;
+  display: block;
+  font-size: 3em;
+  font-weight: normal;
+  text-align: center;
+}
+.card{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+.card-deck{
+    padding: 50px 100px;
+}
+.card-title{
+    text-align: center;
+}
+.btn-light{
+    background-color: var(--bg-secundaria);
+    color: white;
+    border: none;
+}
