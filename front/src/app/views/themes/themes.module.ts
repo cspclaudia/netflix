@@ -14,7 +14,12 @@ const routes: Routes = [
   },
 ];
 @NgModule({
-  declarations: [BaseComponent, PerfisComponent, ListaComponent,FullBannerComponent],
+  declarations: [
+    BaseComponent,
+    PerfisComponent,
+    ListaComponent,
+    FullBannerComponent,
+  ],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),

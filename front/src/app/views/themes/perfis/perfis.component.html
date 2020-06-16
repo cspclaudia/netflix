@@ -1,6 +1,6 @@
 <div class="card">
     <img [src]="perilVarClasse.ImagemUrl ? env+perilVarClasse.ImagemUrl: '../../../../assets/img/perfil1.png'"
-        class="card-img-top" alt="...">
+        class="card-img-top" alt="..." (click)="video()">
     <div class="card-body">
         <div class="config" *ngIf="!show">
             <a type="button" (click)="editar(perilVarClasse)"><i class="fa fa-edit"></i></a>

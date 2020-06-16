@@ -3,13 +3,14 @@ import { environment } from 'src/environments/environment';
 import Swal from 'sweetalert2/dist/sweetalert2.js';
 import 'sweetalert2/src/sweetalert2.scss';
 import { PerfilService } from 'src/app/core/services/perfil.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-perfis',
   templateUrl: './perfis.component.html',
   styleUrls: ['./perfis.component.css'],
 })
 export class PerfisComponent implements OnInit {
-  constructor(private perfil: PerfilService) {}
+  constructor(private perfil: PerfilService, private router: Router) {}
 
   @Input() perilVarClasse;
   env = environment.apifile;
@@ -67,5 +68,8 @@ export class PerfisComponent implements OnInit {
       this.show = true;
       localStorage.setItem('config', 'true');
     }
+  }
+  video() {
+    this.router.navigateByUrl('/video');
   }
 }
