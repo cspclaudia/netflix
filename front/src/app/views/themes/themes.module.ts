@@ -6,6 +6,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PerfisComponent } from './perfis/perfis.component';
 import { Routes, RouterModule } from '@angular/router';
 import { FullBannerComponent } from './full-banner/full-banner.component';
+import { ListaComponent } from './lista/lista.component';
 const routes: Routes = [
   {
     path: 'video',
@@ -13,7 +14,7 @@ const routes: Routes = [
   },
 ];
 @NgModule({
-  declarations: [BaseComponent, PerfisComponent, FullBannerComponent],
+  declarations: [BaseComponent, PerfisComponent, ListaComponent,FullBannerComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
