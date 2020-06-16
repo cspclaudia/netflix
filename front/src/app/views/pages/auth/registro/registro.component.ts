@@ -26,7 +26,7 @@ export class RegistroComponent implements OnInit {
         Validators.pattern('[a-zA-Z0-9-_.]+@[a-zA-Z0-9-_.]+'),
       ]),
       Telefone: this.fb.control('', [
-        Validators.required,     
+        Validators.required,
         Validators.pattern('[0-9]+'),
         Validators.minLength(10),
         Validators.maxLength(11),

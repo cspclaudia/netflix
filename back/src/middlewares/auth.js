@@ -8,7 +8,8 @@ const auth = (req,res,next)=>{
         token = token.slice(7,token.toString().length);
     }
     if(token){
-        jwt.verify(token,'najuleflix',(err,decoded)=>{
+        console.log('Token Auth',token);
+        jwt.verify(token,'NaJuLeClaflix',(err,decoded)=>{
             if(err){
                 return res.json({
                     success:false,

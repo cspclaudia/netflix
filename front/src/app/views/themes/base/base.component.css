@@ -25,17 +25,45 @@
   font-weight: normal;
   text-align: center;
 }
-.card{
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+
+.btn-danger {
+  background-color: var(--bg-secundaria);
+  border: none;
+  font-weight: bold;
+  margin-top: 35px;
+  margin-left: 1005px;
 }
-.card-deck{
-    padding: 50px 100px;
+
+.btn-light {
+  background-color: var(--bg-secundaria);
+  color: white;
+  border: none;
 }
-.card-title{
-    text-align: center;
+.card-deck {
+  padding: 50px 100px;
 }
-.btn-light{
-    background-color: var(--bg-secundaria);
-    color: white;
-    border: none;
+.adicionar {
+  cursor: pointer;
+}
+.fa-plus {
+  padding: 10px 15px;
+  margin: 50px auto;
+  font-size: 50px;
+  border: 2px solid var(--color-pimaria);
+  border-radius: 50%;
+}
+
+.card {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+.card img {
+  max-width: 15%;
+  margin: 10px auto;
+}
+.card-title {
+  text-align: center;
+}
+
+.salvar{
+  margin-top: 10px;
 }

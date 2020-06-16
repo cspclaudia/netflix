@@ -1,0 +1,18 @@
+.btn-light {
+  background-color: var(--bg-secundaria);
+  color: white;
+  border: none;
+}
+.card-deck {
+  padding: 50px 100px;
+}
+.adicionar {
+  cursor: pointer;
+}
+.fa-plus {
+  padding: 10px 15px;
+  margin: 50px auto;
+  font-size: 50px;
+  border: 2px solid var(--color-pimaria);
+  border-radius: 50%;
+}

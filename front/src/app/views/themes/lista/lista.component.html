@@ -1,0 +1,40 @@
+<div class="card-deck">
+    <div class="row">
+        <app-perfis [perilVarClasse]="perfil" *ngFor="let perfil of perfis"></app-perfis>
+
+        <div class="adicionar">
+            <a type="button" (click)="abrirModal()"><i class="fa fa-plus"></i></a>
+        </div>
+        <div class="card" *ngIf="show">
+            <form [formGroup]="formPerfil">
+                <div class="card-body">
+                    <h6>Adicionar Perfil:</h6><br>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" placeholder="Nome do Perfil" formControlName="Nome"
+                                required>
+                        </div>
+                    </div><br>
+                    <!-- <div class="row">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Nome do Perfil"
+                                        formControlName="ImagemUrl" required>
+                                </div>
+                            </div><br> -->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <input type="checkbox" placeholder="Infantil?" checked="false"
+                                formControlName="Restricao" />
+                        </div>
+                    </div><br>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="adicionar">
+                                <a type="button" class="btn btn-light salvar" (click)="adicionarPeril()">Salvar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>

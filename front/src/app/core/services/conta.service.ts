@@ -9,7 +9,7 @@ const api = environment.api;
 @Injectable()
 export class ContaService {
   constructor(private http: HttpClient, private router: Router) {}
-
+  token = localStorage.getItem('token');
   cadastrarConta(usuario: ContaI): Observable<any> {
     return this.http.post(`${api}/conta`, usuario);
   }
@@ -20,10 +20,10 @@ export class ContaService {
     });
   }
   buscarContaLogada(): Observable<any> {
-    return this.http.get(`${api}/usuarios/info`);
+    return this.http.get(`${api}/conta/info`);
   }
   editarConta(senha: string, telefone: string, id: string): Observable<any> {
-    return this.http.put(`${api}/mensagens/editar/${id}`, {
+    return this.http.put(`${api}/conta/editar/${id}`, {
       Senha: senha,
       Telefone: telefone,
     });
@@ -32,9 +32,8 @@ export class ContaService {
     return this.http.delete(`${api}/conta/deletar/:id`);
   }
   isLogged(): boolean {
-    const token = localStorage.getItem('token');
-    console.log(token);
-    return token ? true : false;
+    console.log(this.token);
+    return this.token ? true : false;
   }
   logout() {
     localStorage.removeItem('token');

@@ -7,6 +7,7 @@ module.exports = {
       const ContaId = res.locals.auth_data.id;
       req.body.Conta = ContaId;
       const perfil = await Perfil.create(req.body);
+      // console.log('perfilCadas:',perfil);
       return res.status(201).json({
         perfil,
       });
@@ -17,11 +18,15 @@ module.exports = {
     }
   },
   async buscarPerfis(req, res) {
+    //{_id: {$gt: lastViewedMessage._id}}
+
+    const ContaId = res.locals.auth_data.id;
     try {
-      const perfil = await Perfil.find({}).populate("Conta");
-      return res.status(201).json({
-        perfil,
-      });
+      const perfil = await Perfil.find({}, (err, perfil) => {
+        return res.status(201).json({
+          perfil,
+        });
+      }).populate("Conta");
     } catch (err) {
       return res.json({
         erro: err,
@@ -37,7 +42,7 @@ module.exports = {
             Nome: req.body.Nome,
             Descricao: req.body.Descricao,
             ImagemUrl: req.body.ImagemUrl,
-            Restricao: req.body.Restricao
+            Restricao: req.body.Restricao,
           },
         }
       );
@@ -64,5 +69,5 @@ module.exports = {
         erro: err,
       });
     }
-  }
+  },
 };

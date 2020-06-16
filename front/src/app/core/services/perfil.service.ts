@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { environment } from '../../../environments/environment';
 import { Observable } from 'rxjs';
 import { PerfilI } from '../interfaces/perfil.interface';
+import { ContaI } from '../interfaces/conta.interface';
 const api = environment.api;
 @Injectable()
 export class PerfilService {
