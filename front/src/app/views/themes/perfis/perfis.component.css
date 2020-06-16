@@ -1,11 +1,18 @@
 .card {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
 }
-.card img{
-  max-width: 50%;
-  margin: 10px auto;
+.card img {
+  max-width: 30%;
+  margin: 5px auto;
 }
 .card-title {
   text-align: center;
 }
-
+.config{
+  margin-left: 90px;
+}
+.fa {
+  padding: 10px 15px;
+  font-size: 20px;
+  color: var(--color-pimaria);
+}

@@ -17,10 +17,18 @@ export class PerfilService {
   buscarPerfis(): Observable<any> {
     return this.http.get(`${api}/perfil`);
   }
-  editarPerfil(senha: string, telefone: string, id: string): Observable<any> {
+  editarPerfil(
+    id: string,
+    nome?: string,
+    restricao?: boolean,
+    imagemUrl?: string,
+    descricao?: string
+  ): Observable<any> {
     return this.http.put(`${api}/perfil/editar/${id}`, {
-      Senha: senha,
-      Telefone: telefone,
+      Nome: nome,
+      Restricao: restricao,
+      ImagemUrl: imagemUrl,
+      Descricao: descricao,
     });
   }
 

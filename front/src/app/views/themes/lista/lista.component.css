@@ -1,13 +1,21 @@
-.btn-light {
-  background-color: var(--bg-secundaria);
-  color: white;
-  border: none;
-}
 .card-deck {
-  padding: 50px 100px;
+  padding: 40px 40px;
+}
+.containerPerfilForm{
+  margin: 0 550px;
 }
 .adicionar {
   cursor: pointer;
+}
+.card {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+.card img {
+  max-width: 30%;
+  margin: 5px auto;
+}
+.card-title {
+  text-align: center;
 }
 .fa-plus {
   padding: 10px 15px;
@@ -15,4 +23,17 @@
   font-size: 50px;
   border: 2px solid var(--color-pimaria);
   border-radius: 50%;
+}
+.btn-light {
+  background-color: var(--bg-secundaria);
+  color: white;
+  border: none;
+}
+
+.btn-danger {
+  background-color: var(--bg-secundaria);
+  border: none;
+  font-weight: bold;
+  margin-top: 35px;
+  margin-left: 1005px;
 }

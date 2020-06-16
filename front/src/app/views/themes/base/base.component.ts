@@ -18,10 +18,14 @@ export class BaseComponent implements OnInit {
   conta: ContaI;
   @Input() perilVarClasse;
   ngOnInit(): void {
+    // localStorage.setItem('config', 'true');
     this.autenticacao.buscarContaLogada().subscribe((conta) => {
       this.conta = conta;
       console.log('ContaLogada:', this.conta);
     });
+  }
+  gerenciarPerfis() {
+    localStorage.setItem('config', 'false');
   }
   sair() {
     localStorage.removeItem('token');
