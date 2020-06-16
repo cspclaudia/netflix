@@ -4,11 +4,22 @@ import { BaseComponent } from './base/base.component';
 import { InterceptorService } from 'src/app/core/utils/intercept.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PerfisComponent } from './perfis/perfis.component';
-import { ListaComponent } from './lista/lista.component';
-
+import { Routes, RouterModule } from '@angular/router';
+import { FullBannerComponent } from './full-banner/full-banner.component';
+const routes: Routes = [
+  {
+    path: 'video',
+    component: FullBannerComponent,
+  },
+];
 @NgModule({
-  declarations: [BaseComponent, PerfisComponent, ListaComponent],
-  imports: [CommonModule, FormsModule, ReactiveFormsModule],
+  declarations: [BaseComponent, PerfisComponent, FullBannerComponent],
+  imports: [
+    CommonModule,
+    RouterModule.forChild(routes),
+    FormsModule,
+    ReactiveFormsModule,
+  ],
   exports: [BaseComponent, CommonModule, FormsModule, ReactiveFormsModule],
   providers: [InterceptorService],
 })
