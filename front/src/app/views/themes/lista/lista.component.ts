@@ -19,7 +19,7 @@ export class ListaComponent implements OnInit {
     this.show = false;
     this.perfilService.buscarPerfis().subscribe((res) => {
       console.log(res);
-      this.perfis = res.perfil;
+      this.perfis = res.perfis;
     });
     this.formPerfil = this.fb.group({
       Nome: this.fb.control('', [Validators.required]),
