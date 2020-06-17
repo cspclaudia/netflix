@@ -10,6 +10,7 @@ import { ContaI } from 'src/app/core/interfaces/conta.interface';
   styleUrls: ['./lista.component.css'],
 })
 export class ListaComponent implements OnInit {
+  checkboxModel = { value: false };
   constructor(private perfilService: PerfilService, private fb: FormBuilder) {}
   perfis = [];
   formPerfil: FormGroup;
@@ -24,7 +25,7 @@ export class ListaComponent implements OnInit {
     this.formPerfil = this.fb.group({
       Nome: this.fb.control('', [Validators.required]),
       ImagemUrl: this.fb.control('', null),
-      Restricao: this.fb.control('', null),
+      Restricao: this.checkboxModel.value,
     });
   }
   abrirModal() {
@@ -39,5 +40,12 @@ export class ListaComponent implements OnInit {
       });
     this.show = false;
     window.location.reload();
+  }
+  ckeckValue() {
+    if (this.checkboxModel.value === true) {
+      this.checkboxModel.value = false;
+    } else {
+      this.checkboxModel.value = true;
+    }
   }
 }
