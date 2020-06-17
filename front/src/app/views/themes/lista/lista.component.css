@@ -2,7 +2,11 @@
   padding: 40px 40px;
 }
 .containerPerfilForm{
-  margin: 0 550px;
+  margin: 0 auto; 
+  display: block;
+  padding: 20px 30px;
+  max-width: 40%;
+  background: rgba(0, 0, 0, 0.7);
 }
 .adicionar {
   cursor: pointer;
@@ -29,7 +33,6 @@
   color: white;
   border: none;
 }
-
 .btn-danger {
   background-color: var(--bg-secundaria);
   border: none;
