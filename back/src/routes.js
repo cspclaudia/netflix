@@ -15,5 +15,5 @@ routes.post('/perfil',auth,perfilController.cadastrarPerfil);
 routes.get('/perfil',auth,perfilController.buscarPerfis);
 routes.put('/perfil/editar/:id',auth,perfilController.editarPerfil);
 routes.delete('/perfil/deletar/:id',auth,perfilController.deletarPerfil);
-// routes.post('/usuarios/imagem',auth,multer.single('imagem'),contaController.uploadImage);
+routes.post('/perfil/imagem',auth,multer.single('imagem'),perfilController.uploadImage);
 module.exports = routes;

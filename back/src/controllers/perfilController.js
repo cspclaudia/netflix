@@ -14,7 +14,6 @@ module.exports = {
       return res.status(201).json({
         perfil,
       });
-
     } catch (err) {
       return res.json({
         erro: err,
@@ -27,10 +26,10 @@ module.exports = {
       const ContaId = res.locals.auth_data.id;
       const conta = await Conta.findById(ContaId, (err, conta) => {
         perfis = conta.Perfis;
-          return res.status(201).json({
-            perfis,
-          });
-        }).populate("Perfis");
+        return res.status(201).json({
+          perfis,
+        });
+      }).populate("Perfis");
     } catch (err) {
       return res.json({
         erro: err,
@@ -69,12 +68,28 @@ module.exports = {
         .remove()
         .exec();
       perfil.save();
-      
+
       return res.status(200).json({
         perfil: "Sucesso ao deletar o Perfil",
       });
     } catch (err) {
       return res.json({
+        erro: err,
+      });
+    }
+  },
+  async uploadImage(req, res) {
+    try {
+      const perfil = await Perfil.updateOne(
+        { _id: res.locals.auth_data.id },
+        { $set: { ImagemUrl: `files/${req.file.filename}` } }
+      );
+
+      return res.status(200).json({
+        perfil,
+      });
+    } catch (err) {
+      return res.status(400).json({
         erro: err,
       });
     }
