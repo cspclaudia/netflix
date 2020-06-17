@@ -8,12 +8,9 @@ module.exports = {
       const ContaId = res.locals.auth_data.id;
       req.body.Conta = ContaId;
       const perfil = await Perfil.create(req.body);
-      // console.log('perfilCadas:',perfil);
-
       const conta = await Conta.findById(ContaId);
       conta.Perfis.push(perfil._id);
       conta.save();
-      console.log("Perfis: ",conta.Perfis);
       return res.status(201).json({
         perfil,
       });
@@ -34,12 +31,6 @@ module.exports = {
             perfis,
           });
         }).populate("Perfis");
-      console.log("Perfis: ", perfis);
-      // const perfil = await Perfil.find({}, (err, perfil) => {
-      //   return res.status(201).json({
-      //     perfil,
-      //   });
-      // }).populate("Conta");
     } catch (err) {
       return res.json({
         erro: err,
@@ -70,10 +61,15 @@ module.exports = {
   },
   async deletarPerfil(req, res) {
     try {
+      const ContaId = res.locals.auth_data.id;
+      const conta = await Conta.findById(ContaId);
+      conta.Perfis.remove(req.params.id);
+      conta.save();
       const perfil = await Perfil.findOne({ _id: req.params.id })
         .remove()
         .exec();
       perfil.save();
+      
       return res.status(200).json({
         perfil: "Sucesso ao deletar o Perfil",
       });
