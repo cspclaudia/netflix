@@ -8,7 +8,12 @@ import { Component, OnInit } from '@angular/core';
 export class FullBannerComponent implements OnInit {
 
   constructor() { }
+  varImagemSelecionada : any;
 
-  ngOnInit() {  }
+
+  ngOnInit() { 
+    this.varImagemSelecionada = JSON.parse(localStorage.getItem('perfil'));
+    console.log(this.varImagemSelecionada);
+  }
 
 }

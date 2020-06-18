@@ -1,7 +1,7 @@
 <div class="card-deck">
 <div class="card" type="button">
     <img [src]="perfilVarClasse.ImagemUrl ? perfilVarClasse.ImagemUrl: '../../../../assets/img/perfil1.png'"
-        class="card-img-top" (click)="video()">
+        class="card-img-top" (click)="video(perfilVarClasse)">
     <div class="card-body">
         <h5 class="card-title">{{perfilVarClasse.Nome}}</h5>
         <div class="config" *ngIf="!show">

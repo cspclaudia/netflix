@@ -5,6 +5,7 @@ import 'sweetalert2/src/sweetalert2.scss';
 import { PerfilService } from 'src/app/core/services/perfil.service';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ValueConverter } from '@angular/compiler/src/render3/view/template';
 @Component({
   selector: 'app-perfis',
   templateUrl: './perfis.component.html',
@@ -14,6 +15,7 @@ export class PerfisComponent implements OnInit {
   constructor(private perfil: PerfilService,  private fb: FormBuilder, private router: Router) { }
 
   @Input() perfilVarClasse;
+  
   checkboxModel = { value: false };
   formPerfil: FormGroup;
   show: any;
@@ -54,7 +56,13 @@ export class PerfisComponent implements OnInit {
       localStorage.setItem('config', 'true');
     }
   }
-  video() {
+  video(perfil) {
+    console.log("perfil: ", perfil);
+    const Perfil = {
+      ImageUrl: perfil.ImagemUrl,
+      Nome: perfil.Nome,
+    };
+    localStorage.setItem('perfil', JSON.stringify(Perfil));
     this.router.navigateByUrl('/video');
   }
   abrirModal() {
