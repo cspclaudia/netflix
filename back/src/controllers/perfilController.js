@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Perfil = mongoose.model("Perfil");
 const Conta = mongoose.model("Conta");
-//Nome,Conta,Descricao,ImagemUrl,Restricao
+
 module.exports = {
   async cadastrarPerfil(req, res) {
     try {
@@ -43,7 +43,6 @@ module.exports = {
         {
           $set: {
             Nome: req.body.Nome,
-            Descricao: req.body.Descricao,
             ImagemUrl: req.body.ImagemUrl,
             Restricao: req.body.Restricao,
           },

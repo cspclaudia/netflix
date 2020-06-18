@@ -1,6 +1,7 @@
 .card-deck {
   margin: 0 auto; 
   padding: 10px 15px;
+  margin-bottom: 130px;
 }
 .containerPerfilForm{
   margin: 0 auto; 
@@ -12,8 +13,12 @@
 .adicionar {
   cursor: pointer;
 }
+.botao {
+  margin: 50px;
+}
 .card {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  width: 250px;
+  background-color: black;
 }
 .card img {
   max-width: 25%;
@@ -33,6 +38,7 @@
   background-color: var(--bg-secundaria);
   color: white;
   border: none;
+  margin-right: 10px;
 }
 .btn-danger {
   background-color: var(--bg-secundaria);

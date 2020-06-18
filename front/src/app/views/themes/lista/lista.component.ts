@@ -7,9 +7,10 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./lista.component.css'],
 })
 export class ListaComponent implements OnInit {
-  checkboxModel = { value: false };
   constructor(private perfilService: PerfilService, private fb: FormBuilder) {}
+  
   perfis = [];
+  checkboxModel = { value: false };
   formPerfil: FormGroup;
   show: any;
   varImagemSelecionada: string;
@@ -29,18 +30,21 @@ export class ListaComponent implements OnInit {
   abrirModal() {
     this.show = true;
   }
-  adicionarPeril() {
+  adicionarPerfil() {
     // debugger;
     this.formPerfil.value.ImagemUrl = this.varImagemSelecionada;
-   // console.log('adicionarPeril:', this.formPerfil.value.ImagemUrl);
+   // console.log('adicionarPerfil:', this.formPerfil.value.ImagemUrl);
 
     this.perfilService
       .cadastrarPerfil(this.formPerfil.value)
       .subscribe((res) => {
-        //console.log('cadastrarPerfil:', res);
+        //console.log('cadastrarPerfil: ', res);
       });
     this.show = false;
     window.location.reload();
+  }
+  cancelar() {
+    this.show = false;
   }
   ckeckValue() {
     if (this.checkboxModel.value === true) {

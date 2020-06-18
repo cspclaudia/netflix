@@ -22,13 +22,11 @@ export class PerfilService {
     nome?: string,
     restricao?: boolean,
     imagemUrl?: string,
-    descricao?: string
   ): Observable<any> {
     return this.http.put(`${api}/perfil/editar/${id}`, {
       Nome: nome,
       Restricao: restricao,
       ImagemUrl: imagemUrl,
-      Descricao: descricao,
     });
   }
 

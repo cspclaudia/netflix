@@ -8,10 +8,6 @@ const PerfilSchema = mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Conta'
     },
-    Descricao:{
-        type: String,
-        required: false
-    },
     ImagemUrl:{
         type: String,
         required: false

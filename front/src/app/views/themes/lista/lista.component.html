@@ -3,7 +3,7 @@
         <div class="card" *ngIf="show">
             <form [formGroup]="formPerfil">
                 <div class="card-body">
-                    <h6>Adicionar Perfil:</h6><br>
+                    <h5>Adicionar Perfil:</h5><br>
                     <div class="row">
                         <div class="col-md-12">
                             <input type="text" class="form-control" placeholder="Nome do Perfil" formControlName="Nome"
@@ -12,9 +12,9 @@
                     </div><br>
                     <div class="row">
                         <div class="col-md-12">
-                            <h5>Selecione a imagem</h5>
+                            <h6>Selecione a imagem</h6>
                             <img [src]="varImagemSelecionada ? varImagemSelecionada: '../../../../assets/img/perfil1.png'"
-                                class="imagemSelecionada" class="imagemSelecionada">
+                                class="imagemSelecionada">
                             <div class="select">
                                 <img src="../../../../assets/img/perfil1.png" (click)="onSelect($event)"
                                     id="imgPerfil1">
@@ -33,14 +33,15 @@
                     </div><br>
                     <div class="row">
                         <div class="col-md-12">
-                            <input type="checkbox" ng-model="checkboxModel" (change)="ckeckValue()"
-                                formControlName="Restricao" /> Infantil?
+                            <h6><input type="checkbox" ng-model="checkboxModel" (change)="ckeckValue()"
+                                formControlName="Restricao" /> Infantil?</h6>
                         </div>
                     </div><br>
                     <div class="row">
                         <div class="col-md-12">
                             <div class="adicionar">
-                                <a type="button" class="btn btn-light salvar" (click)="adicionarPeril()">Salvar</a>
+                                <a type="button" class="btn btn-light salvar" (click)="adicionarPerfil()">Salvar</a>
+                                <a type="button" class="btn btn-light" (click)="cancelar()">Cancelar</a>
                             </div>
                         </div>
                     </div>
@@ -52,8 +53,8 @@
 <div class="row">
     <div class="col-md-12">
         <div class="card-deck row justify-content-md-center">
-            <app-perfis [perilVarClasse]="perfil" *ngFor="let perfil of perfis"></app-perfis>
-            <div class="adicionar">
+            <app-perfis [perfilVarClasse]="perfil" *ngFor="let perfil of perfis"></app-perfis>
+            <div class="adicionar botao">
                 <a type="button" (click)="abrirModal()"><i class="fa fa-plus"></i></a>
             </div>
         </div>

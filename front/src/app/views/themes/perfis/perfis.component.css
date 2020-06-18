@@ -1,18 +1,41 @@
 .card {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-}
-.card img {
-  max-width: 50%;
-  margin: 5px auto;
+  margin: 50px;
+  height: 170px;
+  width: 170px;
 }
 .card-title {
   text-align: center;
 }
 .config{
-  margin-left: 50px;
+  margin-left: 17px;
 }
 .fa {
   padding: 10px 15px;
   font-size: 20px;
   color: var(--color-pimaria);
 }
+
+
+.btn-light {
+  background-color: var(--bg-secundaria);
+  color: white;
+  border: none;
+  margin-right: 10px;
+}
+.select img{
+  height: 40px;
+  width: 40px;
+  padding: 1px 2px;
+}
+.select img:hover{
+  height: 39px;
+  width: 39px;
+  border-radius: 5px;
+}
+.imagemSelecionada{
+  height: 50px;
+  width: 50px;
+}
+
+
+
