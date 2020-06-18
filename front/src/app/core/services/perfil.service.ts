@@ -35,4 +35,8 @@ export class PerfilService {
   deletarPerfil(id: string): Observable<any> {
     return this.http.delete(`${api}/perfil/deletar/${id}`, {});
   }
+  adicionarFoto(url: FormData): Observable<any> {
+    // console.log('URL:', url);
+    return this.http.post(`${api}/perfil/imagem`, url, {});
+  }
 }

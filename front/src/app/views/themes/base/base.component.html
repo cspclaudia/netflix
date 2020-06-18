@@ -3,14 +3,14 @@
         <div class="nav">
             <div class="logo">
                 <a href="http://localhost:4200/">
-                    <img src="../../../../assets//img/logo-bg-dark-removebg.png">
+                    <img src="../../../../assets/img/logo-bg-dark-removebg.png">
                 </a>
             </div>
-            <div>
-                <button class="btn btn-danger" (click)="sair()">
-                    Sair
-                </button>
-            </div>
+        </div>
+        <div class="pull-right">
+            <button type="button" class="btn btn-danger margem-right" (click)="sair()">
+                Sair
+            </button>
         </div>
         <div class="content">
             <h1 class="title">
@@ -18,65 +18,6 @@
             </h1>
         </div>
         <app-lista></app-lista>
-        <button type="button" class="btn btn-danger gerenciarPerfis" (click)="gerenciarPerfis()">
-            Gerenciar Perfis
-        </button>
     </div>
 </div>
 
-
-
-
-
-
-
-
-
-<!-- 
-<div class="card-deck">
-    <app-perfis [perilVarClasse]="perfil" *ngFor="let perfil of perfis"></app-perfis>
-    <div class="listPerfis" attr.data-ontime="{{perilVarClasse}}" data-id="pane-{{perilVarClasse}}" *ngFor="let perfil of perfis">
-        <div class="card">
-            <img  [src]="perilVarClasse.Conta.Perfil.ImagemUrl ? env+perilVarClasse.Conta.Perfil.ImagemUrl: '../../../../assets/img/perfil1.png'" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">perilVarClasse.Perfil.Nome</h5>
-            </div>
-        </div>
-    </div>
-    <div class="card" *ngIf="show">
-        <form [formGroup]="formPerfil">
-            <div class="card-body">
-                <h6>Adicionar Perfil:</h6><br>
-                <div class="row">
-                    <div class="col-md-6">
-                        <input type="text" class="form-control" placeholder="Nome do Perfil"
-                            formControlName="Nome" required>
-                    </div>
-                </div><br>
-                <div class="row">
-                    <div class="col-md-6">
-                        <input type="text" class="form-control" placeholder="Nome do Perfil"
-                            formControlName="ImagemUrl" required>
-                    </div>
-                </div><br>
-                <div class="row">
-                    <div class="col-md-6">
-                        <input type="checkbox" placeholder="Infantil?" checked="false"
-                            formControlName="Restricao" />
-                    </div>
-                </div><br>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="adicionar">
-                            <a type="button" class="btn btn-light salvar" (click)="adicionarPeril()">Salvar</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </form>
-    </div>
-    <div class="adicionar">
-        <a type="button" (click)="abrirModal()"><i class="fa fa-plus"></i></a>
-    </div>
-</div> -->
