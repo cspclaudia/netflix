@@ -10,16 +10,31 @@
                                 required>
                         </div>
                     </div><br>
-                    <!-- <div class="row">
-                                    <div class="col-md-6">
-                                        <input type="text" class="form-control" placeholder="Nome do Perfil"
-                                            formControlName="ImagemUrl" required>
-                                    </div>
-                                </div><br> -->
                     <div class="row">
                         <div class="col-md-12">
-                            <input type="checkbox" ng-model="checkboxModel" (change)="ckeckValue()" 
-                            formControlName="Restricao"/> Infantil?
+                            <h5>Selecione a imagem</h5>
+                            <img [src]="varImagemSelecionada ? varImagemSelecionada: '../../../../assets/img/perfil1.png'"
+                                class="imagemSelecionada" class="imagemSelecionada">
+                            <div class="select">
+                                <img src="../../../../assets/img/perfil1.png" (click)="onSelect($event)"
+                                    id="imgPerfil1">
+                                <img src="../../../../assets/img/perfil2.png" (click)="onSelect($event)"
+                                    id="imgPerfil2">
+                                <img src="../../../../assets/img/perfil3.png" (click)="onSelect($event)"
+                                    id="imgPerfil3">
+                                <img src="../../../../assets/img/perfil4.png" (click)="onSelect($event)"
+                                    id="imgPerfil4">
+                                <img src="../../../../assets/img/perfil5.png" (click)="onSelect($event)"
+                                    id="imgPerfil5">
+                            </div>
+                            <input type="hidden" class="form-control" placeholder="Nome do Perfil"
+                                formControlName="ImagemUrl">
+                        </div>
+                    </div><br>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <input type="checkbox" ng-model="checkboxModel" (change)="ckeckValue()"
+                                formControlName="Restricao" /> Infantil?
                         </div>
                     </div><br>
                     <div class="row">

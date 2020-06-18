@@ -7,7 +7,7 @@ import { PerfilService } from 'src/app/core/services/perfil.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 // import Swal from 'sweetalert2/dist/sweetalert2.js';
 // import 'sweetalert2/src/sweetalert2.scss';
-import { environment } from 'src/environments/environment';
+
 @Component({
   selector: 'app-base',
   templateUrl: './base.component.html',

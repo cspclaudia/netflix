@@ -79,6 +79,8 @@ module.exports = {
     }
   },
   async uploadImage(req, res) {
+    console.log("file:",req.file);
+
     try {
       const perfil = await Perfil.updateOne(
         { _id: res.locals.auth_data.id },

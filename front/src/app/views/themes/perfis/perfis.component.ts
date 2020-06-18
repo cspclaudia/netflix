@@ -13,15 +13,13 @@ export class PerfisComponent implements OnInit {
   constructor(private perfil: PerfilService, private router: Router) {}
 
   @Input() perilVarClasse;
-  env = environment.apifile;
   show: any;
   config = localStorage.getItem('config');
   ngOnInit(): void {
-    console.log('this.config :', this.config);
+   // console.log('this.config :', this.config);
     if (this.config === 'false') {
       this.show = false;
     }
-    // console.log('perilVarClasse:', this.perilVarClasse);
   }
   editar(perfil) {
     // let editperfil = '';
